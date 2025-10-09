@@ -41,9 +41,9 @@ export default function Hero() {
             </h1>
 
             <p className="mt-2 text-base md:text-lg text-white/90 drop-shadow">
-            Arquitectura, datos e integraciones — Python + SQL + web.  
+            Software Engineer — Arquitectura, datos e integraciones.  
             <br className="hidden md:block" />
-            Software con principios de ingeniería.
+            Python + SQL + web.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
