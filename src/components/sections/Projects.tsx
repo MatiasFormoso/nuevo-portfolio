@@ -38,7 +38,7 @@ export default function Projects() {
       <div className="container section">
         <p className="eyebrow">Proyectos</p>
         <h2 className="stitle">Una selección breve de trabajos y POCs</h2>
-        <p className="sdesc">Enfocados en confiabilidad, costo y operación.</p>
+        <p className="sdesc">Proyectos recientes y pruebas de concepto.</p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           <Card
