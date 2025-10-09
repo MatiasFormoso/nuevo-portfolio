@@ -24,7 +24,7 @@ export default function Hero() {
         <div
           className="
             flex items-end
-            min-h-[56vh]            /* mobile cómodo */
+            min-h-[60vh]            /* mobile cómodo */
             md:min-h-[46vh]
             lg:min-h-[70vh]
             xl:min-h-[62vh]
