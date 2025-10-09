@@ -73,3 +73,20 @@ html { scroll-behavior: smooth; }
 
 /* Base */
 body{ background: var(--bg); color: var(--text); }
+
+/* ======= HERO / VIEWPORT FIXES ======= */
+/* Clase utilitaria por si necesitás hero a pantalla completa con altura estable */
+.hero-stable{
+  /* usa la altura real visible calculada por el script (fallback universal) */
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Si hay soporte moderno, gana svh (estable en mobile/webviews) */
+@supports (min-height: 100svh){
+  .hero-stable{ min-height: 100svh; }
+}
+
+/* Evitar glitches de background-attachment: fixed en mobile */
+@media (max-width: 767px){
+  .bg-maybe-fixed{ background-attachment: scroll; }
+}
