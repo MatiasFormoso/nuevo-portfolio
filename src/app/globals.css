@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   Tokens (oscuro sutil)
+   ========================= */
+:root{
+  --bg: #0B0B0C;       /* base */
+  --bg-alt: #0E1013;   /* alt sutil (+~2/3%) */
+  --card: #111114;     /* superficie tarjetas */
+  --border: #23232A;   /* borde tenue */
+  --text: #EDEDED;     /* texto principal (no #fff) */
+  --muted: #B4B4B8;    /* texto secundario */
+  --eyebrow: #9BA3AF;  /* eyebrow */
+  --brand: #4DA3FF;
+  --brand-strong:#2E7FD6;
+}
+
+/* Scroll suave (respeta reduce-motion) */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){ html { scroll-behavior: auto; } }
+
+/* =========================
+   Utilitarios de layout / type
+   ========================= */
+@layer components{
+  .container { @apply mx-auto max-w-6xl px-4 sm:px-6; }
+  .section   { @apply py-16 md:py-24; }
+  .eyebrow   { @apply text-xs font-medium tracking-wide uppercase text-[color:var(--eyebrow)]; }
+  .stitle    { @apply mt-2 text-2xl font-semibold text-[color:var(--text)]; }
+  .sdesc     { @apply mt-1 text-[color:var(--muted)]; }
+
+  /* Bandas full-bleed (sin bordes duros) */
+  .band        { @apply relative isolate w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]; }
+  .band-base   { @apply bg-transparent; }
+  .band-alt    { background-color: var(--bg-alt); }
+
+  /* Tarjetas coherentes */
+  .card        { @apply rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-5; }
+  .card-hover  { @apply transition hover:shadow-[0_0_24px_rgba(123,198,255,0.14)] hover:border-white/15; }
+
+  /* Botones */
+  .btn         { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm transition; }
+  .btn-primary { @apply bg-white text-black hover:bg-white/90; }
+  .btn-ghost   { @apply border border-white/30 bg-white/10 text-white hover:bg-white/15; }
+
+  /* Navegación activa (scroll-spy discreto) */
+  .nav-link { @apply text-sm text-[color:var(--muted)] hover:text-white transition; }
+  .nav-link[data-active="true"]{
+    @apply text-white;
+    position: relative;
+  }
+  .nav-link[data-active="true"]::after{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 2px; border-radius: 9999px;
+    background: var(--brand);
+  }
+
+  /* Offset para anclas (header fijo) */
+  .anchor-section { scroll-margin-top: 84px; }
+  @screen md { .anchor-section { scroll-margin-top: 96px; } }
+
+  /* Accesibilidad */
+  .btn:focus-visible, .nav-link:focus-visible, a:focus-visible{
+    outline: 2px solid color-mix(in srgb, var(--brand) 70%, white);
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+}
+
+/* Base */
+body{ background: var(--bg); color: var(--text); }
