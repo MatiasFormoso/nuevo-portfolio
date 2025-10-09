@@ -2,8 +2,7 @@ export default function About() {
   return (
     <section id="about" className="band band-alt anchor-section">
       <div className="container section">
-        <p className="eyebrow">Sobre mí</p>
-        <h2 className="stitle">Construyo software claro, útil y mantenible</h2>
+        <h2 className="stitle">Sobre mí</h2>
 
         <div className="mt-4 card card-hover">
           <p className="text-[color:var(--muted)]">
