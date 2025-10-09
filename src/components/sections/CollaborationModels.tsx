@@ -25,7 +25,7 @@ export default function CollaborationModels() {
           <div className="card card-hover">
             <h3 className="text-lg font-semibold">Ayuda puntual</h3>
             <p className="mt-1 text-[color:var(--muted)]">
-              Asesoría específica o desbloqueo técnico: integraciones, SQL, ETL o despliegues.
+              Tiempo dedicado a un tema concreto.
             </p>
           </div>
         </div>
