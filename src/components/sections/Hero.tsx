@@ -2,7 +2,7 @@ import { CONFIG } from "@/lib/config";
 
 export default function Hero() {
   return (
-    // full-bleed, pero con altura más baja y tope en desktop
+    /* full-bleed */
     <section className="relative isolate w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
       {/* BG image */}
       <div
@@ -14,21 +14,21 @@ export default function Hero() {
         }}
       />
 
-      {/* overlays más sutiles */}
+      {/* overlays */}
       <div className="absolute inset-0 -z-10 bg-black/45" />
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-16 bg-gradient-to-b from-black/45 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-16 bg-gradient-to-t from-black/35 to-transparent" />
 
-      {/* altura: más rectangular en desktop, sin aplastar en mobile */}
+      {/* Altura estable: reemplazo de vh -> svh */}
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div
           className="
             flex items-end
-            min-h-[60vh]            /* mobile cómodo */
-            md:min-h-[46vh]
-            lg:min-h-[70vh]
-            xl:min-h-[62vh]
-            max-h-[560px]           /* tope para pantallas grandes */
+            min-h-[60svh]          /* antes: 60vh */
+            md:min-h-[46svh]       /* antes: 46vh */
+            lg:min-h-[70svh]       /* antes: 70vh */
+            xl:min-h-[62svh]       /* antes: 62vh */
+            max-h-[560px]
           "
         >
           <div className="max-w-2xl pb-10 md:pb-12">
@@ -41,9 +41,9 @@ export default function Hero() {
             </h1>
 
             <p className="mt-2 text-base md:text-lg text-white/90 drop-shadow">
-            Software Engineer — Arquitectura, datos e integraciones.  
-            <br className="hidden md:block" />
-            Python + SQL + web.
+              Software Engineer — Arquitectura, datos e integraciones.&nbsp;
+              <br className="hidden md:block" />
+              Python + SQL + web.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

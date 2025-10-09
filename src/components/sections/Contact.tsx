@@ -9,7 +9,7 @@ export default function Contact() {
 
         <div className="mt-6 card md:flex md:items-center md:justify-between md:gap-4">
           <p className="text-[color:var(--muted)]">
-            ¿Tenés algo puntual o una web/app por levantar? Escribime y vemos si encaja.
+            ¿Tenés algo puntual o una web/app por levantar? Escribime y lo vemos juntos.
           </p>
           <div className="mt-4 flex flex-wrap gap-2 md:mt-0">
             <a
