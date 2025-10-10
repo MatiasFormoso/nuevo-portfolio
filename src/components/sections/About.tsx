@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="band band-alt anchor-section">
+    <section id="about" className="band band-base anchor-section">
       <div className="container section">
         <h2 className="stitle">Sobre mí</h2>
 

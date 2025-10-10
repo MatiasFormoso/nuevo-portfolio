@@ -34,7 +34,7 @@ function Card({ title, blurb, bullets, moreHref }: CardProps) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="band band-base anchor-section">
+    <section id="projects" className="band band-alt anchor-section">
       <div className="container section">
         <p className="eyebrow">Proyectos</p>
         <h2 className="stitle">Una selección breve de trabajos y POCs</h2>

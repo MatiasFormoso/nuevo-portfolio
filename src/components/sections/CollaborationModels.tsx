@@ -1,6 +1,6 @@
 export default function CollaborationModels() {
   return (
-    <section id="models" className="band band-alt anchor-section">
+    <section id="models" className="band band-base anchor-section">
       <div className="container section">
         <p className="eyebrow">Cómo trabajo</p>
         <h2 className="stitle">Modelos de colaboración</h2>

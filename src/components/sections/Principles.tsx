@@ -1,6 +1,6 @@
 export default function Principles() {
   return (
-    <section id="principios" className="band band-base">
+    <section id="principios" className="band band-alt">
       <div className="container section">
         <h2 className="stitle">Principios de ingeniería</h2>
 
