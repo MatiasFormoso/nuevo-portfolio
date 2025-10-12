@@ -31,9 +31,9 @@ export default function Hero() {
             max-h-[560px]
           "
         >
-          <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 w-full pb-10 md:pb-12">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 w-full pb-10 md:pb-12">
             {/* Imagen de perfil */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 md:self-start md:pt-8">
               <div className="w-24 h-24 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl relative">
                 <img
                   src="/images/profile/matias-formoso.jpg"
@@ -59,7 +59,9 @@ export default function Hero() {
               </h1>
 
               <p className="mt-3 md:mt-2 text-lg md:text-lg text-white/95 md:text-white/90 drop-shadow leading-relaxed md:leading-normal">
-                Software Engineer — Arquitectura, datos e integraciones.&nbsp;
+                Software Engineer — Arquitectura,&nbsp;
+                <br className="md:hidden" />
+                datos e integraciones.&nbsp;
                 <br className="hidden md:block" />
                 Python + SQL + web.
               </p>
@@ -93,9 +95,9 @@ export default function Hero() {
 
               {/* Frase de colaboración */}
               <p className="mt-8 md:mt-6 text-base md:text-sm text-white/85 md:text-white/80 drop-shadow italic leading-relaxed md:leading-normal">
-                Abierto a colaborar en proyectos donde la tecnología&nbsp;
+                Abierto a colaborar en proyectos&nbsp;
                 <br className="md:hidden" />
-                simplifique lo importante.
+                donde la tecnología simplifique lo importante.
               </p>
             </div>
           </div>
