@@ -31,7 +31,7 @@ export default function Hero() {
             max-h-[560px]
           "
         >
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 w-full pb-10 md:pb-12">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 w-full pt-20 pb-10 md:pt-0 md:pb-12">
             {/* Imagen de perfil */}
             <div className="flex-shrink-0 md:self-start md:pt-8">
               <div className="w-24 h-24 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl relative">
