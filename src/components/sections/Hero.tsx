@@ -76,20 +76,20 @@ export default function Hero() {
                   LinkedIn
                 </a>
                 <a
-                  href={`mailto:${CONFIG.contact.email}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg md:rounded-xl border border-white/30 bg-white/10 px-6 py-3 md:px-4 md:py-2 text-sm font-semibold md:text-sm text-white hover:bg-white/20 hover:border-white/40 md:hover:bg-white/15 transition-all duration-200 backdrop-blur-sm md:backdrop-blur-none"
-                >
-                  Email
-                </a>
-                <a
                   href={CONFIG.contact.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg md:rounded-xl border border-white/30 bg-white/10 px-6 py-3 md:px-4 md:py-2 text-sm font-semibold md:text-sm text-white hover:bg-white/20 hover:border-white/40 md:hover:bg-white/15 transition-all duration-200 backdrop-blur-sm md:backdrop-blur-none"
                 >
                   GitHub
+                </a>
+                <a
+                  href={`mailto:${CONFIG.contact.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg md:rounded-xl border border-white/30 bg-white/10 px-6 py-3 md:px-4 md:py-2 text-sm font-semibold md:text-sm text-white hover:bg-white/20 hover:border-white/40 md:hover:bg-white/15 transition-all duration-200 backdrop-blur-sm md:backdrop-blur-none"
+                >
+                  Email
                 </a>
               </div>
 
