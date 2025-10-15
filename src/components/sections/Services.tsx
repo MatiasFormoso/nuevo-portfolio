@@ -1,4 +1,8 @@
+"use client";
+
 import { CONFIG } from "@/lib/config";
+import { AnimatedGrid, AnimatedItem } from "@/components/AnimatedSection";
+import { motion } from "framer-motion";
 
 type Service = { title: string; blurb: string; bullets: string[] };
 
@@ -38,30 +42,36 @@ export default function Services() {
     <section id="services" className="band band-alt">
       <div className="container section">
         <p className="eyebrow">Servicios</p>
-        <h2 className="stitle">Arquitectura, datos e integraciones · Desarrollo web</h2>
+        <h2 className="stitle">
+          Arquitectura, datos e integraciones · Desarrollo web
+        </h2>
         <p className="sdesc">Priorizo trazabilidad y mantenibilidad.</p>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <AnimatedGrid className="mt-8 grid gap-6 md:grid-cols-3">
           {SERVICES.map((s) => (
-            <div key={s.title} className="card card-hover">
-              <h3 className="text-lg font-semibold">{s.title}</h3>
-              <p className="mt-1 text-[color:var(--muted)]">{s.blurb}</p>
-              <ul className="mt-3 list-disc space-y-1 pl-5 text-[color:var(--muted)]">
-                {s.bullets.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
-              <div className="mt-4">
-                <a
-                  href="#contact"
-                  className="btn border border-[color:var(--border)] hover:bg-[#1A1A1F]"
-                >
-                  Consultar
-                </a>
+            <AnimatedItem key={s.title}>
+              <div className="card card-hover">
+                <h3 className="text-lg font-semibold">{s.title}</h3>
+                <p className="mt-1 text-[color:var(--muted)]">{s.blurb}</p>
+                <ul className="mt-3 list-disc space-y-1 pl-5 text-[color:var(--muted)]">
+                  {s.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+                <div className="mt-4">
+                  <motion.a
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    href="#contact"
+                    className="btn border border-[color:var(--border)] hover:bg-[#1A1A1F] hover:shadow-md transition-all duration-200"
+                  >
+                    Consultar
+                  </motion.a>
+                </div>
               </div>
-            </div>
+            </AnimatedItem>
           ))}
-        </div>
+        </AnimatedGrid>
       </div>
     </section>
   );

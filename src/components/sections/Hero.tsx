@@ -1,4 +1,7 @@
+"use client";
+
 import { CONFIG } from "@/lib/config";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -32,73 +35,113 @@ export default function Hero() {
           "
         >
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 w-full pt-20 pb-10 md:pt-0 md:pb-12">
-            {/* Imagen de perfil */}
-            <div className="flex-shrink-0 md:self-start md:pt-8">
+            {/* Imagen de perfil con animación */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="flex-shrink-0 md:self-start md:pt-8"
+            >
               <div className="w-24 h-24 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl relative">
                 <img
                   src="/images/profile/matias-formoso.jpg"
                   alt="Matías Formoso"
                   className="w-full h-full object-cover object-center filter brightness-95 contrast-110 saturate-100"
-                  style={{ objectPosition: 'center 15%' }}
+                  style={{ objectPosition: "center 15%" }}
                 />
                 {/* Overlay mínimo para integrar con el fondo */}
                 <div className="absolute inset-0 bg-black/5 rounded-full"></div>
                 {/* Borde interno sutil */}
                 <div className="absolute inset-2 border border-white/10 rounded-full"></div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Contenido principal */}
             <div className="flex-1 max-w-2xl text-center md:text-left">
-              <span className="inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 md:px-3 md:py-1 text-xs font-medium md:font-medium text-white/90 backdrop-blur-sm">
+              {/* Badge con animación */}
+              <motion.span
+                initial={{ opacity: 0, y: -15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 md:px-3 md:py-1 text-xs font-medium md:font-medium text-white/90 backdrop-blur-sm"
+              >
                 Córdoba · Remoto
-              </span>
+              </motion.span>
 
-              <h1 className="mt-4 md:mt-3 text-5xl md:text-5xl font-bold md:font-semibold leading-tight tracking-tight text-white drop-shadow-lg md:drop-shadow">
+              {/* Título con animación */}
+              <motion.h1
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="mt-4 md:mt-3 text-5xl md:text-5xl font-bold md:font-semibold leading-tight tracking-tight text-white drop-shadow-lg md:drop-shadow"
+              >
                 Matías Formoso
-              </h1>
+              </motion.h1>
 
-              <p className="mt-3 md:mt-2 text-lg md:text-lg text-white/95 md:text-white/90 drop-shadow leading-relaxed md:leading-normal">
+              {/* Descripción con animación */}
+              <motion.p
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="mt-3 md:mt-2 text-lg md:text-lg text-white/95 md:text-white/90 drop-shadow leading-relaxed md:leading-normal"
+              >
                 Software Engineer — Arquitectura,&nbsp;
                 <br className="md:hidden" />
                 datos e integraciones.&nbsp;
                 <br className="hidden md:block" />
                 Python + SQL + web.
-              </p>
+              </motion.p>
 
-              <div className="mt-8 md:mt-6 flex flex-wrap justify-center md:justify-start gap-4 md:gap-3">
-                <a
+              {/* CTAs con animación */}
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="mt-8 md:mt-6 flex flex-wrap justify-center md:justify-start gap-4 md:gap-3"
+              >
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
                   href={CONFIG.contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg md:rounded-xl bg-[color:var(--brand)] px-6 py-3 md:px-4 md:py-2 text-sm font-semibold md:font-medium text-white hover:bg-[color:var(--brand-strong)] transition-all duration-200 shadow-lg hover:shadow-xl md:shadow-none md:hover:shadow-none"
                 >
                   LinkedIn
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
                   href={CONFIG.contact.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg md:rounded-xl border border-white/30 bg-white/10 px-6 py-3 md:px-4 md:py-2 text-sm font-semibold md:text-sm text-white hover:bg-white/20 hover:border-white/40 md:hover:bg-white/15 transition-all duration-200 backdrop-blur-sm md:backdrop-blur-none"
                 >
                   GitHub
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
                   href={`mailto:${CONFIG.contact.email}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg md:rounded-xl border border-white/30 bg-white/10 px-6 py-3 md:px-4 md:py-2 text-sm font-semibold md:text-sm text-white hover:bg-white/20 hover:border-white/40 md:hover:bg-white/15 transition-all duration-200 backdrop-blur-sm md:backdrop-blur-none"
                 >
                   Email
-                </a>
-              </div>
+                </motion.a>
+              </motion.div>
 
-              {/* Frase de colaboración */}
-              <p className="mt-8 md:mt-6 text-base md:text-sm text-white/85 md:text-white/80 drop-shadow italic leading-relaxed md:leading-normal">
+              {/* Frase de colaboración con animación */}
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="mt-8 md:mt-6 text-base md:text-sm text-white/85 md:text-white/80 drop-shadow italic leading-relaxed md:leading-normal"
+              >
                 Abierto a colaborar en proyectos&nbsp;
                 <br className="md:hidden" />
                 donde la tecnología simplifique lo importante.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
