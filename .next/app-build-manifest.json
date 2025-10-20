@@ -1,20 +1,50 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+    "/_not-found/page": [
+      "static/chunks/webpack-1796d5ecd61cbd74.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-578b3cc17aa7fbbf.js",
+      "static/chunks/main-app-a97b1732ec71d7a0.js",
+      "static/chunks/app/_not-found/page-8520002249bfd8d4.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-1796d5ecd61cbd74.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-578b3cc17aa7fbbf.js",
+      "static/chunks/main-app-a97b1732ec71d7a0.js",
+      "static/css/f985d4ce6999f1c4.css",
+      "static/chunks/763-f0d4bf7d61da8d2e.js",
+      "static/chunks/176-a7e54b76e7abba70.js",
+      "static/chunks/app/layout-f88f667489dc8b47.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-1796d5ecd61cbd74.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-578b3cc17aa7fbbf.js",
+      "static/chunks/main-app-a97b1732ec71d7a0.js",
+      "static/chunks/763-f0d4bf7d61da8d2e.js",
+      "static/chunks/app/page-b21bdb9a5f8ff057.js"
+    ],
+    "/proyectos/market-indicators/page": [
+      "static/chunks/webpack-1796d5ecd61cbd74.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-578b3cc17aa7fbbf.js",
+      "static/chunks/main-app-a97b1732ec71d7a0.js",
+      "static/chunks/app/proyectos/market-indicators/page-b3d95ce633283400.js"
+    ],
+    "/proyectos/pipeline-mp4/page": [
+      "static/chunks/webpack-1796d5ecd61cbd74.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-578b3cc17aa7fbbf.js",
+      "static/chunks/main-app-a97b1732ec71d7a0.js",
+      "static/chunks/app/proyectos/pipeline-mp4/page-eeb7c940b7117110.js"
     ],
     "/proyectos/santa-frida-farm/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/proyectos/santa-frida-farm/page.js"
+      "static/chunks/webpack-1796d5ecd61cbd74.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-578b3cc17aa7fbbf.js",
+      "static/chunks/main-app-a97b1732ec71d7a0.js",
+      "static/chunks/app/proyectos/santa-frida-farm/page-d6cb10636332dd71.js"
     ]
   }
 }
