@@ -24,7 +24,7 @@ export const CONFIG = {
     github: "https://github.com/MatiasFormoso",
   },
   nav: [
-    { href: "#services", label: "Lo que hago" },
+    { href: "#services", label: "Servicios" },
     { href: "#about", label: "Sobre mí" },
     { href: "#projects", label: "Proyectos" },
     { href: "#contact", label: "Contacto" },
