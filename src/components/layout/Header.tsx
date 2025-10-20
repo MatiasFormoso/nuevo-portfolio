@@ -53,6 +53,13 @@ export default function Header() {
   const smoothGo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("#")) return;
     e.preventDefault();
+    
+    // Si estamos en una página de proyecto, navegar al home primero
+    if (window.location.pathname !== "/") {
+      window.location.href = `/${href}`;
+      return;
+    }
+    
     const el = document.querySelector(href);
     if (el) (el as HTMLElement).scrollIntoView({ behavior: "smooth", block: "start" });
     setOpen(false);

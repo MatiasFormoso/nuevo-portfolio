@@ -5,7 +5,7 @@ export const CONFIG = {
     lang: "es",
     url: "http://localhost:3000",
     description:
-      "Arquitectura, datos e integraciones — Python + SQL + web. Software con principios de ingeniería.",
+      "Python, SQL, Next.js, TypeScript — ETL automatizado y APIs. Software con principios de ingeniería.",
   },
   brand: {
     logoText: "Matías Formoso",
@@ -24,7 +24,7 @@ export const CONFIG = {
     github: "https://github.com/MatiasFormoso",
   },
   nav: [
-    { href: "#services", label: "Servicios" },
+    { href: "#services", label: "Lo que hago" },
     { href: "#about", label: "Sobre mí" },
     { href: "#projects", label: "Proyectos" },
     { href: "#contact", label: "Contacto" },

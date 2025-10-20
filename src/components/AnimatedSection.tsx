@@ -18,19 +18,19 @@ const variants = {
     animate: { opacity: 1 },
   },
   slideUp: {
-    initial: { opacity: 0, y: 30 },
+    initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
   },
   slideLeft: {
-    initial: { opacity: 0, x: 30 },
+    initial: { opacity: 0, x: 20 },
     animate: { opacity: 1, x: 0 },
   },
   slideRight: {
-    initial: { opacity: 0, x: -30 },
+    initial: { opacity: 0, x: -20 },
     animate: { opacity: 1, x: 0 },
   },
   scale: {
-    initial: { opacity: 0, scale: 0.96 },
+    initial: { opacity: 0, scale: 0.98 },
     animate: { opacity: 1, scale: 1 },
   },
 };
@@ -49,7 +49,7 @@ export default function AnimatedSection({
       whileInView={variant.animate}
       viewport={{ once: true, amount: 0.15 }}
       transition={{
-        duration: 0.7,
+        duration: 0.6,
         delay,
         ease: [0.25, 0.46, 0.45, 0.94], // easeOutQuart
       }}
@@ -71,8 +71,8 @@ export function AnimatedGrid({ children, className = "" }: { children: ReactNode
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.15,
-            delayChildren: 0.1,
+            staggerChildren: 0.1,
+            delayChildren: 0.05,
           },
         },
       }}
@@ -88,17 +88,17 @@ export function AnimatedItem({ children, className = "" }: { children: ReactNode
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 20 },
         visible: { 
           opacity: 1, 
           y: 0,
           transition: {
-            duration: 0.6,
+            duration: 0.5,
             ease: [0.25, 0.46, 0.45, 0.94],
           }
         },
       }}
-      whileHover={{ y: -4 }}
+      whileHover={{ y: -2 }}
       className={className}
     >
       {children}

@@ -8,11 +8,11 @@
 :root{
   --bg: #0B0B0C;       /* base */
   --bg-alt: #0E1013;   /* alt sutil (+~2/3%) */
-  --card: #111114;     /* superficie tarjetas */
-  --border: #23232A;   /* borde tenue */
-  --text: #EDEDED;     /* texto principal (no #fff) */
-  --muted: #B4B4B8;    /* texto secundario */
-  --eyebrow: #9BA3AF;  /* eyebrow */
+  --card: #101114;     /* superficie tarjetas */
+  --border: #1F2127;   /* borde tenue y más sobrio */
+  --text: #E6E7EA;     /* texto principal (menos contrastado que #fff) */
+  --muted: #A9ADB3;    /* texto secundario más neutro */
+  --eyebrow: #8F98A6;  /* eyebrow más discreto */
   --brand: #4DA3FF;
   --brand-strong:#2E7FD6;
 }
@@ -25,25 +25,55 @@ html { scroll-behavior: smooth; }
    Utilitarios de layout / type
    ========================= */
 @layer components{
-  .container { @apply mx-auto max-w-6xl px-4 sm:px-6; }
-  .section   { @apply py-16 md:py-24; }
-  .eyebrow   { @apply text-xs font-medium tracking-wide uppercase text-[color:var(--eyebrow)]; }
-  .stitle    { @apply mt-2 text-2xl font-semibold text-[color:var(--text)]; }
-  .sdesc     { @apply mt-1 text-[color:var(--muted)]; }
+  .container { @apply mx-auto max-w-6xl px-3 sm:px-4 md:px-6; }
+  .section   { @apply py-16 sm:py-20 md:py-24 lg:py-32; }
+  .eyebrow   { @apply text-xs font-medium tracking-wide uppercase text-[color:var(--eyebrow)] mb-2 sm:mb-3; }
+  .stitle    { 
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-[color:var(--text)] leading-tight tracking-tight;
+    background: linear-gradient(135deg, #ffffff 0%, #e6e7ea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .sdesc     { @apply mt-3 sm:mt-4 text-base sm:text-lg text-[color:var(--muted)] leading-relaxed; }
 
   /* Bandas full-bleed (sin bordes duros) */
   .band        { @apply relative isolate w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]; }
   .band-base   { @apply bg-transparent; }
-  .band-alt    { background-color: var(--bg-alt); }
+  .band-alt    { 
+    background: linear-gradient(135deg, var(--bg-alt) 0%, rgba(14, 16, 19, 0.8) 100%);
+    position: relative;
+  }
+  .band-alt::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at top, rgba(77, 163, 255, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
 
   /* Tarjetas coherentes */
-  .card        { @apply rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-5; }
-  .card-hover  { @apply transition-all duration-300 hover:shadow-[0_0_24px_rgba(123,198,255,0.14)] hover:border-white/15 hover:-translate-y-1; }
+  .card        { @apply rounded-xl border border-[color:var(--border)] bg-[color:var(--card)] p-4 sm:p-6 md:p-8 shadow-sm relative overflow-hidden; }
+  .card::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; left: 0; right: 0; 
+    height: 1px; 
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+  }
+  .card-hover  { @apply transition-all duration-300 ease-out hover:border-white/25 hover:shadow-xl hover:shadow-white/15 hover:-translate-y-2; }
+  .card-hover:hover::before { opacity: 1; }
+  .card-hover:hover { 
+    background: linear-gradient(135deg, rgba(16, 17, 20, 0.98) 0%, rgba(20, 22, 25, 0.95) 100%);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+  }
 
   /* Botones */
-  .btn         { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm transition-all duration-200 hover:shadow-md; }
-  .btn-primary { @apply bg-white text-black hover:bg-white/90; }
-  .btn-ghost   { @apply border border-white/30 bg-white/10 text-white hover:bg-white/15; }
+  .btn         { @apply inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out; }
+  .btn-primary { @apply bg-[color:var(--brand)] text-white hover:bg-[color:var(--brand-strong)] hover:shadow-lg; }
+  .btn-ghost   { @apply border border-[color:var(--border)] bg-[color:var(--card)] text-[color:var(--text)] hover:bg-[color:var(--bg-alt)] hover:border-white/25 hover:shadow-md; }
 
   /* Navegación activa (scroll-spy discreto) */
   .nav-link { @apply text-sm text-[color:var(--muted)] hover:text-white transition-all duration-200; }
@@ -62,6 +92,24 @@ html { scroll-behavior: smooth; }
   /* Offset para anclas (header fijo) */
   .anchor-section { scroll-margin-top: 84px; }
   @screen md { .anchor-section { scroll-margin-top: 96px; } }
+
+  /* Badges para tecnologías */
+  .badge { @apply rounded-md border border-[color:var(--border)] bg-[color:var(--card)] px-3 py-1.5 text-xs font-medium text-white/90 shadow-sm; }
+
+  /* Efectos premium adicionales */
+  .eyebrow {
+    position: relative;
+  }
+  .eyebrow::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand), transparent);
+    border-radius: 1px;
+  }
 
   /* Accesibilidad */
   .btn:focus-visible, .nav-link:focus-visible, a:focus-visible{
