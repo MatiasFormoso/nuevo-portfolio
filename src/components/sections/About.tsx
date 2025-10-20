@@ -6,9 +6,9 @@ export default function About() {
 
         <div className="mt-4 card card-hover">
           <p className="text-[color:var(--muted)]">
-            Estudiante avanzado de Ingeniería en Sistemas de Información (Argentina).
-            Me gusta resolver problemas reales con software simple y bien pensado.
-            Aprendo rápido apoyándome en IA y documentación. Busco contextos donde pueda
+            Estudiante avanzado de Ingeniería en Sistemas de Información (Argentina). 
+            Me gusta resolver problemas reales con software simple y bien pensado. 
+            Aprendo rápido apoyándome en IA y documentación. Busco contextos donde pueda 
             aportar desde lo técnico con visión de producto.
           </p>
         </div>

@@ -39,7 +39,7 @@ export default function Services() {
       <div className="container section">
         <p className="eyebrow">Servicios</p>
         <h2 className="stitle">Arquitectura, datos e integraciones · Desarrollo web</h2>
-        <p className="sdesc">Priorizo trazabilidad, mantenibilidad y operación simple.</p>
+        <p className="sdesc">Priorizo trazabilidad y mantenibilidad.</p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {SERVICES.map((s) => (
