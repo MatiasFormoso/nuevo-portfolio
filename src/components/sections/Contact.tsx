@@ -4,38 +4,36 @@ export default function Contact() {
   return (
     <section id="contact" className="band band-alt">
       <div className="container section">
-        <p className="eyebrow">Contacto</p>
-        <h2 className="stitle">Hablemos</h2>
-
-        <div className="mt-6 card md:flex md:items-center md:justify-between md:gap-4">
-          <p className="text-[color:var(--muted)]">
+        <div className="max-w-3xl">
+          <h2 className="stitle">Contacto</h2>
+          <p className="mt-3 text-[color:var(--muted)] leading-relaxed">
             ¿Tenés algo puntual o una web/app por levantar? Escribime y lo vemos juntos.
           </p>
-          <div className="mt-4 flex flex-wrap gap-2 md:mt-0">
+
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
-              className="btn bg-[color:var(--brand)] text-black hover:bg-[color:var(--brand-strong)] font-medium"
+              className="btn bg-[color:var(--brand)] text-white hover:bg-[color:var(--brand-strong)] font-medium"
               href={CONFIG.contact.whatsapp}
               target="_blank"
             >
               WhatsApp
             </a>
             <a
-              className="btn border border-[color:var(--border)] hover:bg-[#1A1A1F]"
+              className="btn border border-[color:var(--border)] bg-[color:var(--card)] hover:bg-[color:var(--bg-alt)] hover:border-white/20 font-medium"
               href={`mailto:${CONFIG.contact.email}`}
               target="_blank"
             >
               Email
             </a>
             <a
-              className="btn border border-[color:var(--border)] hover:bg-[#1A1A1F]"
+              className="btn border border-[color:var(--border)] bg-[color:var(--card)] hover:bg-[color:var(--bg-alt)] hover:border-white/20 font-medium"
               href={CONFIG.contact.linkedin}
               target="_blank"
             >
               LinkedIn
             </a>
-            {/* Oculto en mobile, visible desde md */}
             <a
-              className="btn border border-[color:var(--border)] hover:bg-[#1A1A1F] hidden md:inline-flex"
+              className="btn border border-[color:var(--border)] bg-[color:var(--card)] hover:bg-[color:var(--bg-alt)] hover:border-white/20 font-medium"
               href={CONFIG.contact.github}
               target="_blank"
             >
