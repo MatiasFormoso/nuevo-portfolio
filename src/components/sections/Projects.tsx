@@ -13,13 +13,13 @@ type CardProps = {
 
 function Card({ title, blurb, bullets, moreHref }: CardProps) {
   return (
-    <div className="card card-hover h-[280px] sm:h-[300px] md:h-auto flex flex-col">
+    <div className="card card-hover min-h-[280px] sm:min-h-[300px] flex flex-col">
       <div className="flex-1 min-h-0">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="mt-1 text-[color:var(--muted)]">{blurb}</p>
-        <ul className="mt-3 list-disc space-y-1 pl-5 text-[color:var(--muted)]">
+        <h3 className="text-base sm:text-lg font-semibold leading-tight">{title}</h3>
+        <p className="mt-1 text-sm sm:text-base text-[color:var(--muted)] leading-relaxed">{blurb}</p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm sm:text-base text-[color:var(--muted)]">
           {bullets.map((b) => (
-            <li key={b}>{b}</li>
+            <li key={b} className="leading-relaxed">{b}</li>
           ))}
         </ul>
       </div>
@@ -107,7 +107,7 @@ export default function Projects() {
         </div>
 
             {/* Carrusel */}
-            <div className="mt-10 relative">
+            <div className="mt-8 sm:mt-10 relative">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
@@ -132,7 +132,7 @@ export default function Projects() {
 
               {/* Navegación */}
               {totalPages > 1 && (
-                <div className="flex flex-col sm:flex-row items-center justify-between mt-8 gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-between mt-6 sm:mt-8 gap-4">
                   {/* Botones de navegación */}
                   <div className="flex items-center gap-2 sm:gap-3">
                     <motion.button
