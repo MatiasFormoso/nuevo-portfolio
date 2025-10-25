@@ -27,7 +27,7 @@ export default function SantaFridaFarmPage() {
             <p className="text-sm sm:text-base md:text-lg text-[color:var(--muted)] mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto">
               Plataforma web multilingüe para Santa Frida Farm, finca agrícola en Marinilla, Antioquia, Colombia. 
               Desarrollada con Next.js 14, TypeScript estricto, sistema de internacionalización ES/EN, 
-              SEO técnico con Schema.org y optimización de rendimiento para mercados internacionales (UAE, Canadá).
+              SEO técnico con Schema.org y optimización de rendimiento para mercados internacionales.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -102,10 +102,10 @@ export default function SantaFridaFarmPage() {
                   para visibilidad internacional y performance optimizada.
                 </p>
                 <ul className="space-y-2 text-[color:var(--muted)]">
-                  <li>• Exportación de aguacate Hass con trazabilidad completa</li>
-                  <li>• Café Catimor de especialidad con perfiles de taza equilibrados</li>
-                  <li>• Hortalizas orgánicas de temporada con manejo en cadena de frío</li>
-                  <li>• Certificaciones ICA y SENA para credibilidad internacional</li>
+                  <li>• Promoción de productos agrícolas colombianos para mercados internacionales</li>
+                  <li>• Presencia web multilingüe (español e inglés)</li>
+                  <li>• Optimización SEO para búsquedas internacionales</li>
+                  <li>• Certificaciones agrícolas del sector</li>
                 </ul>
               </div>
 
