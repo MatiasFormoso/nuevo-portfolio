@@ -102,10 +102,10 @@ export default function SantaFridaFarmPage() {
                   para visibilidad internacional y performance optimizada.
                 </p>
                 <ul className="space-y-2 text-[color:var(--muted)]">
-                  <li>• Promoción de productos agrícolas colombianos para mercados internacionales</li>
-                  <li>• Presencia web multilingüe (español e inglés)</li>
-                  <li>• Optimización SEO para búsquedas internacionales</li>
-                  <li>• Certificaciones agrícolas del sector</li>
+                  <li>• Productos agrícolas colombianos</li>
+                  <li>• Mercados internacionales</li>
+                  <li>• Certificaciones del sector</li>
+                  <li>• Estándares de calidad exportación</li>
                 </ul>
               </div>
 
